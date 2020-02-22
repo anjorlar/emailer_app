@@ -1,0 +1,1 @@
+An app that automates surveying users experience and also sending emails to user 
