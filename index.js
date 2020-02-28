@@ -7,8 +7,8 @@ require('./models/user');
 require('./services/passport');
 console.log('>>>>>>>>>', keys.mongoURI)
 mongoose.connect(keys.mongoURI, {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true,
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 }).then((res) => {
     console.log('connected to mongoose', res)
 }).catch((e) => {
