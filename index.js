@@ -5,7 +5,7 @@ const passport = require('passport');
 const keys = require('./config/keys');
 require('./models/user');
 require('./services/passport');
-
+console.log('>>>>>>>>>', keys.mongoURI)
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
