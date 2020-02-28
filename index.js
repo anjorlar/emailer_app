@@ -9,6 +9,7 @@ console.log('>>>>>>>>>', keys.mongoURI)
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    serverSelectionTimeoutMS: 5000 // Timeout after 5s instead of 30s
 }).then((res) => {
     console.log('connected to mongoose', res)
 }).catch((e) => {
