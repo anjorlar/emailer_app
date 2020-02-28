@@ -9,6 +9,11 @@ require('./services/passport');
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+}).then((res) => {
+    console.log('connected to mongoose', res)
+}).catch((e) => {
+    console.log('err connecting', e)
+    process.exit(1)
 });
 
 const app = express();
