@@ -8,10 +8,9 @@ require('./services/passport');
 console.log('>>>>>>>>>', keys.mongoURI)
 mongoose.connect(keys.mongoURI, {
     useNewUrlParser: true,
-    // useUnifiedTopology: true,
-    // serverSelectionTimeoutMS: 5000 // Timeout after 5s instead of 30s
+    useUnifiedTopology: true
 }).then((res) => {
-    console.log('connected to mongoose', res)
+    console.log('connected to mongoose')
 }).catch((e) => {
     console.log('err connecting', e)
     process.exit(1)
@@ -30,6 +29,3 @@ require('./routes/authRoutes')(app);
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT);
-
-
-// mongodb+srv://anjy:<0luwatomisin>@cluster0-s91o5.mongodb.net/test
