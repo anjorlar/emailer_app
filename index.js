@@ -12,6 +12,13 @@ mongoose.connect(keys.mongoURI, {
 });
 
 const app = express();
+app.use(cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000, //allows cookie to last for 30 days converted to milliseconds
+    keys: [keys.cookieKey]
+}));
+// console.log('cokkies key', keys.cookieKey)
+app.use(passport.initialize());
+app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 const PORT = process.env.PORT || 5000;
