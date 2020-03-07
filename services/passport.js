@@ -23,18 +23,25 @@ passport.use(
             clientSecret: keys.googleClientSecret,
             callbackURL: '/auth/google/callback',
             proxy: true
-        }, (accessToken, refreshToken, profile, done) => {
-            User.findOne({ googleId: profile.id })
-                .then((existingUuser) => {
-                    if (existingUuser) {
-                        console.log('user already exist')
-                        done(null, existingUuser)
-                    } else {
-                        new User({ googleId: profile.id }).save()
-                            .then(user => done(null, user))
-                            .catch(error => console.log('error saving user', error))
-                    }
-                }).catch(e => console.log('error getting exsiting user', e))
+        }, async (accessToken, refreshToken, profile, done) => {
+            try {
+                const existingUser = await User.findOne({ googleId: profile.id })
+                console.log('existing user', existingUser)
+                // we already have a record with the given profile ID
+                if (existingUuser) {
+                    console.log('user already exist')
+                    return done(null, existingUuser)
+                }
+                try {
+                    //we don't have a user with this ID, create a new user and save the user
+                    const user = await new User({ googleId: profile.id }).save()
+                    done(null, user)
+                } catch (error) {
+                    console.log('error saving new user', error)
+                }
+            } catch (err) {
+                console.log('err getting existing user', err)
+            }
         }
     )
 );
