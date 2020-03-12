@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const keys = require('./config/keys');
-const path = require('path')
+// const path = require('path')
+const cors = require('cors');
+
 require('./models/user');
 require('./services/passport');
 
@@ -24,6 +26,7 @@ const app = express();
 // app.get('/', function (req, res) {
 //     res.sendFile(path.join(__dirname, '../server/client/build', 'index.html'));
 // });
+app.use(cors())
 app.use(cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //allows cookie to last for 30 days converted to milliseconds
     keys: [keys.cookieKey]
