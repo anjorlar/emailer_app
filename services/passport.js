@@ -37,7 +37,7 @@ passport.use(
                     const user = await new User({ googleId: profile.id }).save();
                     done(null, user);
                 } catch (error) {
-                    console.error('error saving new user', error)
+                    console.error('error saving new user', error);
                 }
             } catch (err) {
                 console.error('err getting existing user', err)
