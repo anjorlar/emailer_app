@@ -40,7 +40,7 @@ passport.use(
                     console.error('error saving new user', error);
                 }
             } catch (err) {
-                console.error('err getting existing user', err)
+                console.error('err getting existing user', err);
             }
         }
     )
