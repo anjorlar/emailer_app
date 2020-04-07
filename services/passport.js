@@ -41,7 +41,7 @@ passport.use(
                 }
             } catch (err) {
                 console.error('err getting existing user', err);
-            }
+            };
         }
     )
 );
