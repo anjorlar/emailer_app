@@ -31,7 +31,7 @@ passport.use(
                 if (existingUuser) {
                     console.log('user already exist')
                     return done(null, existingUuser)
-                }
+                };
                 try {
                     //we don't have a user with this ID, create a new user and save the user
                     const user = await new User({ googleId: profile.id }).save();
