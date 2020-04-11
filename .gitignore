@@ -1,7 +1,6 @@
 node_modules
 dev.js
 .DS_Store
-data.txt
-data.json
 data.js
-data copy.txt
+*json
+*txt
