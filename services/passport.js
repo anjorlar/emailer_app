@@ -28,9 +28,9 @@ passport.use(
                 const existingUser = await User.findOne({ googleId: profile.id })
                 console.log('existing user', existingUser);
                 // we already have a record with the given profile ID
-                if (existingUuser) {
+                if (existingUser) {
                     console.log('user already exist');
-                    return done(null, existingUuser)
+                    return done(null, existingUser)
                 };
                 try {
                     //we don't have a user with this ID, create a new user and save the user
