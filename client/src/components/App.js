@@ -13,6 +13,7 @@ const Landing = () => <h1>landing </h1>
 class App extends Component {
     componentDidMount() {
         this.props.fetchUser();
+        console.log('got here apppp')
     }
     render() {
         return (

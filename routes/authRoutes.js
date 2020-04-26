@@ -15,6 +15,12 @@ module.exports = app => {
     });
     app.get('/api/current_user', (req, res) => {
         console.log('current user gotten');
-        res.send(req.user);
+        let User = req.user;
+        res.send(
+            {
+                message: 'user gotten successfully',
+                error: false,
+                User
+            });
     });
 };
