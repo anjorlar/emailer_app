@@ -5,12 +5,12 @@ class Header extends Component {
         return (
             <nav>
                 <div className='nav-wrapper'>
-                    <span href="#" className="left brand-logo">
+                    <a href="#" className="left brand-logo">
                         Emailer
-                    </span>
+                    </a>
                     <ul className="right">
                         <li>
-                            <button className='pink'>Login with Google</button>
+                            <a>Login with Google</a>
                         </li>
                     </ul>
                 </div>
@@ -19,4 +19,4 @@ class Header extends Component {
     }
 };
 
-export default Header;
+export default Header; 

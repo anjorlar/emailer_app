@@ -5,15 +5,14 @@ import * as actions from '../actions';
 import Header from "./Header";
 
 
-const Dashboard = () => <h3>dashboard </h3>
-const SurveyNew = () => <h3>surveyNew</h3>
-const Landing = () => <h1>landing </h1>
+const Dashboard = () => <h3>Dashboard </h3>
+const SurveyNew = () => <h3>SurveyNew</h3>
+const Landing = () => <h1>Landing </h1>
 
 
 class App extends Component {
     componentDidMount() {
         this.props.fetchUser();
-        console.log('got here apppp')
     }
     render() {
         return (
