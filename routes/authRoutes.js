@@ -7,20 +7,19 @@ module.exports = app => {
     })
     );
 
-    app.get('/auth/google/callback', passport.authenticate('google'));
+    app.get('/auth/google/callback', passport.authenticate('google'),
+        (req, res) => {
+            res.redirect('/surveys')
+        }
+    );
     app.get('/api/logout', (req, res) => {
         console.log('logged out');
         req.logout();
         res.send(req.user);
     });
     app.get('/api/current_user', (req, res) => {
-        console.log('current user gotten');
         let User = req.user;
-        res.send(
-            {
-                message: 'user gotten successfully',
-                error: false,
-                User
-            });
+        console.log('current user gotten', User);
+        res.send(User);
     });
 };
