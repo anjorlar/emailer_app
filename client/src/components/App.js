@@ -5,11 +5,11 @@ import * as actions from '../actions';
 
 
 import Header from "./Header";
-
+import Landing from "./Landing";
 
 const Dashboard = () => <h3>Dashboard </h3>
 const SurveyNew = () => <h3>SurveyNew</h3>
-const Landing = () => <h1>Landing </h1>
+// const Landing = () => <h1>Landing </h1>
 
 
 class App extends Component {
