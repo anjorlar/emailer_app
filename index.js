@@ -7,7 +7,7 @@ const keys = require('./config/keys');
 // const path = require('path')
 const cors = require('cors');
 
-require('./models/Users');
+require('./models/User');
 require('./services/passport');
 
 //mongo connector
