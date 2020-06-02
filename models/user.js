@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 // const Schema = mongoose.Schema;
 const { Schema } = mongoose;
 
-const userSchema = new Schema({
+const userSchema = mongoose.Schema({
     googleId: String,
     credits: {
         type: Number,
@@ -10,4 +10,4 @@ const userSchema = new Schema({
     },
 });
 
-mongoose.model('users', userSchema);
+module.exports = mongoose.model('users', userSchema);
