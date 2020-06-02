@@ -16,8 +16,8 @@ mongoose.connect(keys.mongoURI, {
 }).then((res) => {
     console.log('connected to mongoose')
 }).catch((e) => {
-    console.log('err connecting', e)
-    process.exit(1)
+    console.log('err connecting', e);
+    process.exit(1);
 });
 
 const app = express();
@@ -48,7 +48,7 @@ if (process.env.NODE.ENV === 'production') {
     app.get('*', (req, res) => {
         res.send(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
-}
+};
 
 const PORT = process.env.PORT || 5000;
 
