@@ -16,8 +16,8 @@ mongoose.connect(keys.mongoURI, {
 }).then((res) => {
     console.log('connected to mongoose')
 }).catch((e) => {
-    console.log('err connecting', e);
-    process.exit(1);
+    console.log('err connecting', e)
+    process.exit(1)
 });
 
 const app = express();
