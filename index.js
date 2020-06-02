@@ -26,7 +26,7 @@ const app = express();
 // app.get('/', function (req, res) {
 //     res.sendFile(path.join(__dirname, '../server/client/build', 'index.html'));
 // });
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(cors())
 app.use(cookieSession({
     maxAge: 30 * 24 * 60 * 60 * 1000, //allows cookie to last for 30 days converted to milliseconds
