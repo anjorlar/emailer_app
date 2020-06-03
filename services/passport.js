@@ -32,7 +32,7 @@ passport.use(
                 // we already have a record with the given profile ID
                 if (existingUser) {
                     console.log('user already exist');
-                    return done(null, existingUser)
+                    return done(null, existingUser);
                 };
                 try {
                     //we don't have a user with this ID, create a new user and save the user
