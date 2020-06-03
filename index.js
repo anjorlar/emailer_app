@@ -15,7 +15,7 @@ mongoose.connect(keys.mongoURI, {
 }).then((res) => {
     console.log('connected to mongoose')
 }).catch((e) => {
-    console.log('err connecting', e)
+    console.log('err connecting', e);
     process.exit(1)
 });
 
