@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 const cors = require('cors');
 require('./models/User.js');
+require('./models/Survey');
 require('./services/passport');
 
 //mongo connector
@@ -37,6 +38,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app)
 
 if (process.env.NODE_ENV === 'production') {
     // Express will serve up the production assets eg(our main.js or main.css file)
