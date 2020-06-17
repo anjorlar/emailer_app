@@ -18,6 +18,8 @@
   "author": "Adebayo Anjola",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/client": "^7.2.0",
+    "@sendgrid/mail": "^7.2.0",
     "body-parser": "^1.19.0",
     "concurrently": "^5.1.0",
     "cookie-session": "^1.4.0",
@@ -27,6 +29,7 @@
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-google-oauth20": "^2.0.0",
+    "sendgrid": "^5.2.3",
     "stripe": "^8.55.0"
   }
 }
