@@ -48,3 +48,4 @@ passport.use(
     )
 );
 
+// {"service":"oda-api-v2 -service","level":"error","message":"error with deleting single notification Cannot read property 'length' of null","stack":"TypeError: Cannot read property 'length' of null\n    at exports.clearNotificationWhereReadIsTrue (/home/ubuntu/oda-api-v2/server/schedulers/deleteNotificationReadFalse.js:13:78)","timestamp":"2020-06-12T03:00:00.012Z"}
