@@ -9,7 +9,7 @@ class SurveyList extends Component {
     renderSurveys() {
         return this.props.surveys.reverse().map(survey => { // the reverse()  sorts the surveys so the newest shows first
             return (
-                <div className="card pink darken-4" key={survey._id}>
+                <div className="card indigo" key={survey._id}>
                     <div className="card-content">
                         <span className='card-title'> {survey.title}</span>
                         <p>
@@ -18,6 +18,10 @@ class SurveyList extends Component {
                         <p className="right">
                             Sent On: {new Date(survey.dateSent).toLocaleDateString()}
                         </p>
+                        {/* stiil working on the logic}
+                        {/* <p className='right'>
+                            Last Responded On: {new Date(survey.lastResponded).toLocaleDateString()} 
+                        </p> */}
                     </div>
                     <div className='card-action'>
                         <a href="#">Yes: {survey.yes}</a>
