@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from "redux-form";
 import _ from 'lodash'
 import { Link } from "react-router-dom";
+import'./Survey.css';
 
 import SurveyField from "./SurveyField";
 import validateEmails from '../../utils/validateEmails';
@@ -17,7 +18,7 @@ class SurveyForm extends Component {
     }
     render() {
         return (
-            <div>
+            <div className="form">
                 <form onSubmit={this.props.handleSubmit(this.props.onSurveySubmit)}>
                     {this.renderFields()}
                     <Link to="/surveys" className="red btn-flat black-text">
