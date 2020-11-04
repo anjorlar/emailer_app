@@ -7,7 +7,6 @@ import reduxThunk from 'redux-thunk';
 import './index.css';
 import App from './components/App';
 import reducers from './reducers';
-import 'tachyons';
 
 //axios for development purposes only
 // import axios from 'axios';
