@@ -1,5 +1,5 @@
 # An app that automates surveying user's experience and also sending emails to user 
- `link: https://emaily-app-v1.herokuapp.com/`
+ `url: https://emaily-app-v1.herokuapp.com/`
 
   ##  To install or run on local machine
 Download or clone
